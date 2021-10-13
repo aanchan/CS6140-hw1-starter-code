@@ -147,7 +147,7 @@ if __name__ == '__main__':
     clf = NaiveBayesClassifier(train_dir = 'data/train')
     clf.train()
     print(f'Performance on class <{target.upper()}>, keeping stopwords')
-    precision, recall, f1_score = clf.evaluate(test_dir = 'data/train', target = target)
+    precision, recall, f1_score = clf.evaluate(test_dir = 'data/dev', target = target)
     print(f'\tPrecision: {precision}\t Recall: {recall}\t F1: {f1_score}\n')
     
     clf = NaiveBayesClassifier(train_dir = 'data/train', REMOVE_STOPWORDS=True)
